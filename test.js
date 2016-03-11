@@ -95,15 +95,21 @@ d3.json("json/data.json", function(error, data) {
         .attr("height", 100)
         .on("mouseover", function() {
             d3.select(this).transition().duration(200)
-                .attr("width", 500)
-                .attr("height", 500)
-                .attr("y", heightInterval - 250)
+                .attr("width", 600)
+                .attr("height", 600)
+                .attr("y", heightInterval - 250);
+
+            svg.selectAll(".keyPath").transition().duration(100)
+                .style("stroke-opacity", 0);
         })
         .on("mouseout", function() {
             d3.select(this).transition().duration(200)
                 .attr("width", widthInterval)
                 .attr("height", 100)
-                .attr("y", heightInterval)
+                .attr("y", heightInterval);
+
+            svg.selectAll(".keyPath").transition().duration(100)
+                .style("stroke-opacity", 0.2);
         })
         ;
 
