@@ -93,19 +93,40 @@ d3.json("json/data.json", function(error, data) {
         })
         .attr("width", widthInterval)
         .attr("height", 100)
-        .on("mouseover", function() {
+        .on("mouseover", function(data) {
+            for( var i = 0; i < data.keywords.length; i++) {
+
+                var id = "#" + data.keywords[i].name.toLowerCase().replace(/\s/g, '').replace(/[0-9]/g, '');
+                d3.selectAll(id).transition().duration(200)
+                    .style("stroke-width", 7)
+                    .style("stroke-opacity", 1.0);
+            }
+        })
+        .on("mouseout", function(data) {
+            for( var i = 0; i < data.keywords.length; i++) {
+
+                var id = "#" + data.keywords[i].name.toLowerCase().replace(/\s/g, '').replace(/[0-9]/g, '');
+                d3.selectAll(id).transition().duration(200)
+                    .style("stroke-width", 3)
+                    .style("stroke-opacity", 0.2);
+            }
+        })
+        .on("dblclick", function() {
             d3.select(this).transition().duration(200)
                 .attr("width", 600)
                 .attr("height", 600)
-                .attr("y", heightInterval - 250);
+                .attr("x", width/2 - 300)
+                .attr("y", height/2 - 300);
 
             svg.selectAll(".keyPath").transition().duration(100)
                 .style("stroke-opacity", 0);
         })
-        .on("mouseout", function() {
+        .on("click", function(data) {
+            console.log(data);
             d3.select(this).transition().duration(200)
                 .attr("width", widthInterval)
                 .attr("height", 100)
+                .attr("x", data.x - 0.5*widthInterval)
                 .attr("y", heightInterval);
 
             svg.selectAll(".keyPath").transition().duration(100)
