@@ -69,8 +69,27 @@ d3.json("json/data.json", function(error, data) {
     var widthInterval = width/data.length;
     var heightInterval = 3.25*height/5;
 
-    //Display rectangles with images and data
+    //Display dates
+    svg.selectAll(".date")
+        .data(data)
+        .enter()
+        .append("text")
+        .attr("class", "dateText")
+        .attr("x", function(data, i) {
+            data.x = i*widthInterval + 0.5*widthInterval;
+            return i*widthInterval;
+        })
+        .attr("y", 20)
+        .style("fill", "black")
+        .style("font-size", function(data) {
+            return 14;
+        })
+        .text(function(data) {
+            return data.date;
+        })
+        ;
 
+    //Display rectangles with images and data
 
     var dataNode = svg.selectAll(".dataNode")
         .data(data)
@@ -116,7 +135,7 @@ d3.json("json/data.json", function(error, data) {
                 .attr("width", 600)
                 .attr("height", 600)
                 .attr("x", width/2 - 300)
-                .attr("y", height/2 - 300);
+                .attr("y", height/2 - 400);
 
             svg.selectAll(".keyPath").transition().duration(100)
                 .style("stroke-opacity", 0);
