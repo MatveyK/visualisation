@@ -1,0 +1,323 @@
+[
+   {
+      "title":"Google Earth",
+      "author":"Google",
+      "date":2001,
+      "imgUrl":"goolgeEarth.jpeg",
+      "keywords":[
+         {
+            "name":"aerial view",
+            "weight":0.65
+         },
+         {
+            "name":"3D view",
+            "weight":0.35
+         }
+      ]
+   },
+
+   {
+      "title":"Real London Tube Map",
+      "author":"TFL,London",
+      "date":2015,
+      "imgUrl":"realLondonTubeMap.jpg",
+      "keywords":[
+         {
+            "name":"deformed",
+            "weight":0.5
+         },
+         {
+            "name":"routes",
+            "weight":0.5
+         }
+      ]
+   },
+
+   {
+      "title":"Photo-Auto Guide,Chicago to Rockford",
+      "author":"H. Sargent Michaels",
+      "date":1905,
+      "imgUrl":"photoAutoGuide.jpg",
+      "keywords":[
+         {
+            "name":"street view",
+            "weight":0.65
+         },
+          {"name":"directions",
+           "weight":0.35
+         }
+      ]
+   },
+
+   {
+      "title":"London Tube Map",
+      "author":"Harry Beck",
+      "date":1931,
+      "imgUrl":"londonTubeMap.jpg",
+      "keywords":[
+         {
+            "name":"abstract",
+            "weight":0.75
+         },
+         {
+            "name":"routes",
+            "weight":0.25
+         }
+      ]
+   },
+
+   {
+      "title":"Cairo to Khartoum",
+      "author":"The Graphic",
+      "date":1884,
+      "imgUrl":"cairo2Khartoum.png",
+      "keywords":[
+         {
+            "name":"street view",
+            "weight":0.75
+         },
+         {
+            "name":"unfolding", 
+            "weight":0.25
+         }
+      ]
+   },
+
+   {
+      "title":"Dymaxion Map",
+      "author":"Bulkminster Fuller",
+      "date":1943,
+      "imgUrl":"dymaxionMap.jpg",
+      "keywords":[
+         {
+            "name":"world map",
+            "weight":0.25
+         },
+         {
+            "name":"unfolding",
+            "weight":0.75
+         }
+      ]
+   },
+   {
+      "title":"Equal Area World Map",
+      "author":"Arno Peters",
+      "date":1973,
+      "imgUrl":"equalAreaMap.jpg",
+      "keywords":[
+         {
+            "name":"world map",
+            "weight":0.25
+         },
+         {
+            "name":"deformed",
+            "weight":0.75
+         }
+      ]
+   },
+
+
+
+   {
+      "title":"Google Street View",
+      "author":"Google",
+      "date":2007,
+      "imgUrl":"googleStView.jpg",
+      "keywords":[
+         {
+            "name":"street view",
+            "weight":0.5
+         },
+         {
+            "name":"directions",
+            "weight":0.5
+         }
+      ]
+   },
+   {
+      "title":"WorldMapper",
+      "author":"Danny Dorling",
+      "date":2008,
+      "imgUrl":"worldMapper.jpg",
+      "keywords":[
+         {
+            "name":"world map",
+            "weight":0.35
+         },
+         {
+            "name":"deformed",
+            "weight":0.65
+         }
+      ]
+   },
+   {
+      "title":"Here and There",
+      "author":"J. Shulze,M. Webb",
+      "date":2009,
+      "imgUrl":"here&There.png",
+      "keywords":[
+         {
+            "name":"aerial view",
+            "weight":0.25
+         },
+         {
+            "name":"3D view",
+            "weight":0.25
+         },
+         {
+            "name":"unfolding",
+            "weight":0.5
+         }
+      ]
+   },
+   {
+      "title":"Google Cube",
+      "author":"Google",
+      "date":2012,
+      "imgUrl":"googleCube.png",
+      "keywords":[
+         {
+            "name":"aerial view",
+            "weight":0.35
+         },
+         {
+            "name":"3D view",
+            "weight":0.5
+         },
+         {
+            "name":"unfolding",
+            "weight":0.15
+         }
+      ]
+   },
+   {
+      "title":"Metrography",
+      "author":"Royal College of Art,London",
+      "date":2012,
+      "imgUrl":"metrgraphy.png",
+      "keywords":[
+         {
+            "name":"deformed",
+            "weight":0.5
+         },
+         {
+            "name":"routes",
+            "weight":0.5
+         }
+      ]
+   },
+
+   {
+      "title":"Postcards from Google Earth",
+      "author":"Clement Valla",
+      "date":2014,
+      "imgUrl":"postcardFrGoogle.jpg",
+      "keywords":[
+         {
+            "name":"aerial view",
+            "weight":0.35
+         },
+         {
+            "name":"3D view",
+            "weight":0.15
+         },
+         {
+            "name":"deformed",
+            "weight":0.5
+         }
+      ]
+   },
+
+
+   {
+      "title":"Autobahn Project",
+      "author":"Nina Runge",
+      "date":2015,
+      "imgUrl":"autobahnProject.jpg",
+      "keywords":[
+         {
+            "name":"street view",
+            "weight":0.5
+         },
+         {
+            "name":"routes",
+            "weight":0.5
+         }
+      ]
+   },
+
+   {
+      "title":"My Radical Project",
+      "author":"Immanuel Koh",
+      "date":2016,
+      "imgUrl":"myRadicalProject.png",
+      "keywords":[
+         {
+            "name":"deformed",
+            "weight":0.25
+         },
+         {
+            "name":"3D view",
+            "weight":0.15
+         },
+         {
+            "name":"aerial view",
+            "weight":0.05
+         },
+         {
+            "name":"unfolding",
+            "weight":0.2
+         },
+         {
+            "name":"street view",
+            "weight":0.35
+         }
+      ]
+   },
+
+   {
+       "title": "People Powered Map",
+       "author": "The Internet",
+       "date": 2010,
+       "imgUrl": "peoplepowered.png",
+       "keywords": [
+            {
+                "name": "deformed",
+                "weight": 0.99
+            },
+            {
+                "name": "world map",
+                "weight": 0.90
+            }]
+   },
+
+   {
+       "title": "Aspen Movie Map",
+       "author": "Andrew Lippman",
+       "date": 1978,
+       "imgUrl": "aspen.jpg",
+       "keywords": [
+            {
+                "name": "street view",
+                "weight": 0.80
+            },
+            {
+                "name": "3D view",
+                "weight": 0.75
+            },
+            {
+                "name": "aerial view",
+                "weight": 0.10
+            },
+            {
+                "name": "routes",
+                "weight": 0.5
+            },
+            {
+                "name": "directions",
+                "weight": 0.5
+            }]
+   }
+
+
+]

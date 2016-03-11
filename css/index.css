@@ -1,0 +1,26 @@
+body {
+	margin: 0px;
+	overflow: hidden;
+}
+
+svg {
+	background-color: white;
+}
+.link {
+    fill: none;
+    stroke: #888888;
+    stroke-weight: 1px;
+    stroke-opacity: 0.5;
+}
+
+
+.keyText{
+	font-family:"Verdana";
+}
+
+.keylink{
+	fill:none;
+	 stroke: #888888;
+	 /*stroke-weight: 10px;*/
+	 stroke-opacity: 0.5;
+}
