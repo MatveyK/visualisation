@@ -120,6 +120,7 @@ d3.json("json/data.json", function(error, data) {
                     .style("stroke-width", 7)
                     .style("stroke-opacity", 1.0);
             }
+
         })
         .on("mouseout", function(data) {
             for( var i = 0; i < data.keywords.length; i++) {
@@ -129,6 +130,7 @@ d3.json("json/data.json", function(error, data) {
                     .style("stroke-width", 3)
                     .style("stroke-opacity", 0.2);
             }
+
         })
         .on("dblclick", function() {
             d3.select(this).transition().duration(200)
@@ -139,9 +141,11 @@ d3.json("json/data.json", function(error, data) {
 
             svg.selectAll(".keyPath").transition().duration(100)
                 .style("stroke-opacity", 0);
+
+            svg.selectAll(".link").transition().duration(100)
+                .style("stroke-opacity", 0);
         })
         .on("click", function(data) {
-            console.log(data);
             d3.select(this).transition().duration(200)
                 .attr("width", widthInterval)
                 .attr("height", 100)
@@ -149,6 +153,9 @@ d3.json("json/data.json", function(error, data) {
                 .attr("y", heightInterval);
 
             svg.selectAll(".keyPath").transition().duration(100)
+                .style("stroke-opacity", 0.2);
+
+            svg.selectAll(".link").transition().duration(100)
                 .style("stroke-opacity", 0.2);
         })
         ;
@@ -213,6 +220,27 @@ d3.json("json/data.json", function(error, data) {
    }
 
    drawKeyLinks(keyLinks);
+
+
+    // Connect images to images
+	for(var i =0;i<data.length-1;i++){
+		var thisArray = data[i].keywords;
+		for(var l =i+1;l<data.length;l++){
+			var thatArray = data[l].keywords;
+			if(thisArray.length>0){
+			 for(var j =0;j<thisArray.length;j++){
+			 	for(var k =0;k<thatArray.length;k++){
+			 		 if((thisArray[j]!=null) && (thisArray[j].name==thatArray[k].name)){
+
+			 			links.push({"source" : data[i],"target":data[l],"keyword": thisArray[j].name,"weight": thisArray[j].weight});
+				 		}
+				 	}
+				} 
+			}	
+		}				 		
+	}
+
+	drawLinks(links);
 });
 
 function drawKeyLinks(keyLinks) {
@@ -247,6 +275,64 @@ function drawKeyLinks(keyLinks) {
             d3.selectAll(id).transition().duration(200)
                 .style("stroke-width", 3)
                 .style("stroke-opacity", 0.2)
+        })
+        ;
+}
+
+function drawLinks(links) {
+    var radians = d3.scale.linear()
+        .range([1.5*Math.PI, 2.5*Math.PI]);
+
+    var arc = d3.svg.line.radial()
+        .interpolate("basis")
+        .tension(0)
+        .angle( function(data) {
+            return radians(data);
+        });
+
+    svg.selectAll(".link")
+        .data(links)
+        .enter()
+        .append("path")
+        .attr("class", "link")
+        .attr("id", function(data) {
+            return data.source.title.toLowerCase().replace(/\s/g, '').replace(/[0-9]/g, '');
+        })
+        .attr("transform", function(data, i) {
+            var xShift = data.source.x + (data.target.x - data.source.x) / 2;
+            var yShift = data.source.y;
+            return "translate(" + xShift + ", " + yShift + ")";
+        })
+        .attr("d", function(data, i) {
+            var xDist = Math.abs(data.source.x - data.target.x);
+            arc.radius(xDist / 2);
+            var points = d3.range(0, Math.ceil(xDist / 3));
+
+            radians.domain([0, points.length - 1]);
+            return arc(points);
+        })
+        .style("stroke-width", function(data, i) {
+            return 10 * data.weight;
+        })
+        .style("stroke", function(data) {
+            return color(cValue(data));
+        })
+        .style("stroke-opacity", 0.2)
+        .on("mouseover", function(data) {
+            d3.select(this)
+                .transition().duration(200)
+                .style("stroke-width", function(data) {
+                    return 30 * data.weight;
+                })
+                .style("stroke-opacity", 1.0);
+        })
+        .on("mouseout", function(data) {
+            d3.select(this)
+                .transition().duration(200)
+                .style("stroke-width", function(data) {
+                    return 10 * data.weight;
+                })
+                .style("stroke-opacity", 0.2);
         })
         ;
 }

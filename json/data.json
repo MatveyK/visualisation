@@ -96,10 +96,6 @@
          {
             "name":"3D view",
             "weight":0.5
-         },
-         {
-            "name":"unfolding",
-            "weight":0.15
          }
       ]
    },
@@ -137,10 +133,6 @@
          {
             "name":"aerial view",
             "weight":0.05
-         },
-         {
-            "name":"unfolding",
-            "weight":0.2
          },
          {
             "name":"street view",
