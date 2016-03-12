@@ -17,23 +17,6 @@
    },
 
    {
-      "title":"Real London Tube Map",
-      "author":"TFL,London",
-      "date":2015,
-      "imgUrl":"realLondonTubeMap.jpg",
-      "keywords":[
-         {
-            "name":"deformed",
-            "weight":0.5
-         },
-         {
-            "name":"routes",
-            "weight":0.5
-         }
-      ]
-   },
-
-   {
       "title":"Photo-Auto Guide,Chicago to Rockford",
       "author":"H. Sargent Michaels",
       "date":1905,
@@ -67,39 +50,6 @@
    },
 
    {
-      "title":"Cairo to Khartoum",
-      "author":"The Graphic",
-      "date":1884,
-      "imgUrl":"cairo2Khartoum.png",
-      "keywords":[
-         {
-            "name":"street view",
-            "weight":0.75
-         },
-         {
-            "name":"unfolding", 
-            "weight":0.25
-         }
-      ]
-   },
-
-   {
-      "title":"Dymaxion Map",
-      "author":"Bulkminster Fuller",
-      "date":1943,
-      "imgUrl":"dymaxionMap.jpg",
-      "keywords":[
-         {
-            "name":"world map",
-            "weight":0.25
-         },
-         {
-            "name":"unfolding",
-            "weight":0.75
-         }
-      ]
-   },
-   {
       "title":"Equal Area World Map",
       "author":"Arno Peters",
       "date":1973,
@@ -115,8 +65,6 @@
          }
       ]
    },
-
-
 
    {
       "title":"Google Street View",
@@ -134,42 +82,7 @@
          }
       ]
    },
-   {
-      "title":"WorldMapper",
-      "author":"Danny Dorling",
-      "date":2008,
-      "imgUrl":"worldMapper.jpg",
-      "keywords":[
-         {
-            "name":"world map",
-            "weight":0.35
-         },
-         {
-            "name":"deformed",
-            "weight":0.65
-         }
-      ]
-   },
-   {
-      "title":"Here and There",
-      "author":"J. Shulze,M. Webb",
-      "date":2009,
-      "imgUrl":"here&There.png",
-      "keywords":[
-         {
-            "name":"aerial view",
-            "weight":0.25
-         },
-         {
-            "name":"3D view",
-            "weight":0.25
-         },
-         {
-            "name":"unfolding",
-            "weight":0.5
-         }
-      ]
-   },
+   
    {
       "title":"Google Cube",
       "author":"Google",
@@ -198,45 +111,6 @@
       "keywords":[
          {
             "name":"deformed",
-            "weight":0.5
-         },
-         {
-            "name":"routes",
-            "weight":0.5
-         }
-      ]
-   },
-
-   {
-      "title":"Postcards from Google Earth",
-      "author":"Clement Valla",
-      "date":2014,
-      "imgUrl":"postcardFrGoogle.jpg",
-      "keywords":[
-         {
-            "name":"aerial view",
-            "weight":0.35
-         },
-         {
-            "name":"3D view",
-            "weight":0.15
-         },
-         {
-            "name":"deformed",
-            "weight":0.5
-         }
-      ]
-   },
-
-
-   {
-      "title":"Autobahn Project",
-      "author":"Nina Runge",
-      "date":2015,
-      "imgUrl":"autobahnProject.jpg",
-      "keywords":[
-         {
-            "name":"street view",
             "weight":0.5
          },
          {
@@ -316,6 +190,57 @@
             {
                 "name": "directions",
                 "weight": 0.5
+            }]
+   },
+
+   {
+       "title": "Visualising Friendships",
+       "author": "Paul Butler",
+       "date": 2010,
+       "imgUrl": "facebook.png",
+       "keywords": [
+            {
+                "name": "social",
+                "weight": 0.75
+            },
+            {
+                "name": "world map",
+                "weight": 0.90
+            }]
+   },
+
+   {
+       "title": "Human Interactions",
+       "author": "Ratti et al.",
+       "date": 2010,
+       "imgUrl": "geog_of_talk.png",
+       "keywords": [
+            {
+                "name": "social",
+                "weight": 0.80
+            },
+            {
+                "name": "3D view",
+                "weight": 0.3
+            },
+            {
+                "name": "deformed",
+                "weight": 0.1
+            }]
+   },
+
+   {
+       "title": "Madrid Map of Knowledge",
+       "date": 2010,
+       "imgUrl": "madridwebmap.jpg",
+       "keywords": [
+            {
+                "name": "social",
+                "weight": 0.80
+            },
+            {
+                "name": "abstract",
+                "weight": 0.4
             }]
    }
 

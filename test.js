@@ -82,7 +82,7 @@ d3.json("json/data.json", function(error, data) {
         .attr("y", 20)
         .style("fill", "black")
         .style("font-size", function(data) {
-            return 14;
+            return 20;
         })
         .text(function(data) {
             return data.date;
@@ -135,7 +135,7 @@ d3.json("json/data.json", function(error, data) {
                 .attr("width", 600)
                 .attr("height", 600)
                 .attr("x", width/2 - 300)
-                .attr("y", height/2 - 400);
+                .attr("y", height/2 - 500);
 
             svg.selectAll(".keyPath").transition().duration(100)
                 .style("stroke-opacity", 0);
