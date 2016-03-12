@@ -318,6 +318,7 @@ function drawLinks(links) {
             return color(cValue(data));
         })
         .style("stroke-opacity", 0.2)
+        /**
         .on("mouseover", function(data) {
             d3.select(this)
                 .transition().duration(200)
@@ -334,5 +335,6 @@ function drawLinks(links) {
                 })
                 .style("stroke-opacity", 0.2);
         })
+        **/
         ;
 }
