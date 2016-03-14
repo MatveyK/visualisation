@@ -117,31 +117,6 @@
    },
 
    {
-      "title":"My Radical Project",
-      "author":"Immanuel Koh",
-      "date":2016,
-      "imgUrl":"myRadicalProject.png",
-      "keywords":[
-         {
-            "name":"deformed",
-            "weight":0.25
-         },
-         {
-            "name":"3D view",
-            "weight":0.15
-         },
-         {
-            "name":"aerial view",
-            "weight":0.05
-         },
-         {
-            "name":"street view",
-            "weight":0.35
-         }
-      ]
-   },
-
-   {
        "title": "People Powered Map",
        "author": "The Internet",
        "date": 2010,
@@ -283,7 +258,66 @@
                 "name": "spontaneous",
                 "weight": 0.6
             }]
-   }
+   },
 
+   {
+       "title": "Human Behaviour Map",
+       "date": 2014,
+       "imgUrl": "humanity.png",
+       "keywords": [
+            {
+                "name": "social",
+                "weight": 0.9
+            },
+            {
+                "name": "cultural",
+                "weight": 0.4
+            }]
+   },
+
+   {
+      "title":"Party Map",
+      "author":"Me",
+      "date":2016,
+      "imgUrl":"myProject.png",
+      "keywords":[
+         {
+            "name":"deformed",
+            "weight":0.25
+         },
+         {
+            "name":"aerial view",
+            "weight":0.05
+         },
+         {
+            "name":"street view",
+            "weight":0.35
+         },
+         {
+             "name": "social",
+             "weight": 0.9
+         },
+         {
+             "name": "spontaneous",
+             "weight": 0.9
+         },
+         {
+             "name": "cultural",
+             "weight": 0.7
+         },
+         {
+             "name": "social",
+             "weight": 0.9
+         },
+         {
+             "name": "spontaneous",
+             "weight": 0.9
+         },
+         {
+             "name": "cultural",
+             "weight": 0.7
+         }
+      ]
+   }
 
 ]
