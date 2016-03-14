@@ -82,55 +82,6 @@
          }
       ]
    },
-   
-   {
-      "title":"Google Cube",
-      "author":"Google",
-      "date":2012,
-      "imgUrl":"googleCube.png",
-      "keywords":[
-         {
-            "name":"aerial view",
-            "weight":0.35
-         },
-         {
-            "name":"3D view",
-            "weight":0.5
-         }
-      ]
-   },
-   {
-      "title":"Metrography",
-      "author":"Royal College of Art,London",
-      "date":2012,
-      "imgUrl":"metrgraphy.png",
-      "keywords":[
-         {
-            "name":"deformed",
-            "weight":0.5
-         },
-         {
-            "name":"routes",
-            "weight":0.5
-         }
-      ]
-   },
-
-   {
-       "title": "People Powered Map",
-       "author": "The Internet",
-       "date": 2010,
-       "imgUrl": "peoplepowered.png",
-       "keywords": [
-            {
-                "name": "deformed",
-                "weight": 0.99
-            },
-            {
-                "name": "world map",
-                "weight": 0.90
-            }]
-   },
 
    {
        "title": "Aspen Movie Map",
@@ -208,6 +159,10 @@
             {
                 "name": "abstract",
                 "weight": 0.4
+            },
+            {
+                "name": "cultural",
+                "weight": 0.5
             }]
    },
 
@@ -308,14 +263,6 @@
          {
              "name": "social",
              "weight": 0.9
-         },
-         {
-             "name": "spontaneous",
-             "weight": 0.9
-         },
-         {
-             "name": "cultural",
-             "weight": 0.7
          }
       ]
    }
