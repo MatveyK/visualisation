@@ -234,6 +234,55 @@
                 "name": "abstract",
                 "weight": 0.4
             }]
+   },
+
+   {
+       "title": "Human Activity Map",
+       "date": 2016,
+       "imgUrl": "24hrshuman.png",
+       "keywords":[
+            {
+                "name": "social",
+                "weight": 0.9
+            },
+            {
+                "name": "world map",
+                "weight": 0.4
+            }]
+   },
+
+   {
+       "title": "Shoreditch Cultural Map",
+       "date": 2015,
+       "imgUrl": "shoreditch.png",
+       "keywords": [
+            {
+                "name": "social",
+                "weight": 0.6
+            },
+            {
+                "name": "cultural",
+                "weight": 0.7
+            }]
+   },
+
+   {
+       "title": "London Live Music Heatmap",
+       "date": 2015,
+       "imgUrl": "gigbloc.png",
+       "keywords": [
+            {
+                "name": "social",
+                "weight": 0.5
+            },
+            {
+                "name": "cultural",
+                "weight": 0.8
+            },
+            {
+                "name": "spontaneous",
+                "weight": 0.6
+            }]
    }
 
 

@@ -19,6 +19,27 @@ var svg = d3.select("body").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
     ;
 
+var addTitleText = function(text) {
+    svg.append("text")
+        .attr("class", "infoText")
+        .attr("id", "infoText")
+        .attr("x", width/2 - 900)
+        .attr("y", height/2 - 400)
+        .style("fill", "black")
+        .style("font-family", "sans-serif")
+        .style("font-size", function(data) {
+            return 34;
+        })
+        .text(text)
+        ;
+}
+
+var removeTitleText = function() {
+    d3.select("#infoText").remove();
+}
+
+addTitleText("Genealogy of Maps");
+
 //Loading External Data
 var format = d3.time.format("%Y");
 d3.json("json/data.json", function(error, data) {
@@ -132,11 +153,11 @@ d3.json("json/data.json", function(error, data) {
             }
 
         })
-        .on("dblclick", function() {
-            d3.select(this).transition().duration(200)
-                .attr("width", 600)
-                .attr("height", 600)
-                .attr("x", width/2 - 300)
+        .on("dblclick", function(data) {
+            d3.select(this).transition().duration(300)
+                .attr("width", 700)
+                .attr("height", 700)
+                .attr("x", width/2 - 200)
                 .attr("y", height/2 - 500);
 
             svg.selectAll(".keyPath").transition().duration(100)
@@ -144,9 +165,12 @@ d3.json("json/data.json", function(error, data) {
 
             svg.selectAll(".link").transition().duration(100)
                 .style("stroke-opacity", 0);
+
+            removeTitleText();
+            addTitleText(data.title);
         })
         .on("click", function(data) {
-            d3.select(this).transition().duration(200)
+            d3.select(this).transition().duration(300)
                 .attr("width", widthInterval)
                 .attr("height", 100)
                 .attr("x", data.x - 0.5*widthInterval)
@@ -157,6 +181,9 @@ d3.json("json/data.json", function(error, data) {
 
             svg.selectAll(".link").transition().duration(100)
                 .style("stroke-opacity", 0.2);
+
+            removeTitleText();
+            addTitleText("Genealogy of Maps");
         })
         ;
 
